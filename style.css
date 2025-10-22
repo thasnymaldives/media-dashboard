@@ -14,7 +14,7 @@ body {
 }
 
 .dashboard {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -51,7 +51,7 @@ header h2 {
 
 .projects {
   margin: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .projects h3 {
@@ -87,6 +87,13 @@ header h2 {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.bas {
+  padding: 10px;
+  align-content: center;
+  text-align: center;   
+  
 }
 
 .project {
