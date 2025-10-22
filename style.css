@@ -6,9 +6,11 @@
 }
 
 body {
-  background: radial-gradient(circle at top left, #003366, #001a33);
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;       /* makes the image fill the whole screen */
   color: #fff;
   padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .dashboard {
@@ -48,7 +50,8 @@ header h2 {
 }
 
 .projects {
-  margin: 20px 0;
+  margin: 20px;
+  padding-bottom: 100px;
 }
 
 .projects h3 {
@@ -70,6 +73,10 @@ header h2 {
   flex: 0 0 330px;
 }
 
+.projects h4 {
+  margin-bottom: 30px;
+}
+
 .project img {
   width: 100%;
   border-radius: 10px;
@@ -83,15 +90,19 @@ header h2 {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 4, 26, 0.235);
   padding: 15px;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
 .card h4 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-weight: 600;
+}
+
+h4 {
+  font-size: 2.4rem;   /* default is around 1rem, so this is larger */
 }
 
 .profile {
@@ -135,13 +146,13 @@ header h2 {
   font-weight: 700;              /* Bold heading */
   color: #004aad;                /* Blue heading */
   margin-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 2.4rem;
 }
 
 .status p {
   font-weight: 400;              /* Regular body text */
   color: #004aad;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
