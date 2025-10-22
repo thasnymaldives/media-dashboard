@@ -60,9 +60,33 @@ header h2 {
 }
 
 .project-cards {
+  overflow-x: hidden;
+}
+
+.card h4 {
+  font-size: 1.2rem; /* or 1.5rem depending on your design */
+  margin-bottom: 15px; /* reduce spacing too */
+}
+
+.project-cards .project {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  animation: scroll-left 10s linear infinite;
+}
+
+.scroll {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
+  gap: 20px;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .project {
@@ -75,10 +99,11 @@ header h2 {
 
 .projects h4 {
   margin-bottom: 30px;
+  font-size: 2.4rem;
 }
 
 .project img {
-  width: 100%;
+  width: 300px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -99,11 +124,9 @@ header h2 {
 .card h4 {
   margin-bottom: 30px;
   font-weight: 600;
+  font-size: 2.4rem;
 }
 
-h4 {
-  font-size: 2.4rem;   /* default is around 1rem, so this is larger */
-}
 
 .profile {
   display: flex;
