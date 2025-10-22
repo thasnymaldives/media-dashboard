@@ -17,12 +17,26 @@
           <h2>MALDIVES IMMIGRATION</h2>
         </div>
       </div>
-      <div class="header-right">
-        <div class="date-info">
-          <p>WEDNESDAY</p>
-          <h3>22 OCTOBER 2025</h3>
-        </div>
-      </div>
+  <div class="date-info">
+  <p id="day"></p>
+  <h3 id="date"></h3>
+</div>
+
+<script>
+  const dayEl = document.getElementById('day');
+  const dateEl = document.getElementById('date');
+
+  const now = new Date();
+
+  // Get day name
+  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
+  dayEl.textContent = dayName;
+
+  // Get full date, e.g., 22 OCTOBER 2025
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const fullDate = now.toLocaleDateString('en-US', options).toUpperCase();
+  dateEl.textContent = fullDate;
+</script>
     </header>
 
     <!-- Ongoing Projects -->
