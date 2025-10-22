@@ -14,7 +14,7 @@ body {
 }
 
 .dashboard {
-  max-width: 1500px;
+  max-width: 1700px;
   margin: auto;
 }
 
@@ -68,6 +68,11 @@ header h2 {
   margin-bottom: 15px; /* reduce spacing too */
 }
 
+
+.card-1 h4 {
+  font-size: 2.0rem; /* or 1.5rem depending on your design */
+  margin-bottom: 15px; /* reduce spacing too */
+}
 .project-cards .project {
   flex: 0 0 auto;
   margin-right: 20px;
@@ -123,9 +128,17 @@ header h2 {
 
 .card {
   background: rgba(0, 4, 26, 0.235);
-  padding: 15px;
+  padding: 35px;
   border-radius: 12px;
   margin-bottom: 15px;
+}
+
+.card-1 {
+  background: rgba(0, 4, 26, 0.235);
+  padding: 35px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  max-width: 300px;
 }
 
 .card h4 {
@@ -134,6 +147,11 @@ header h2 {
   font-size: 2.0rem;
 }
 
+#countdown {
+  color: #ffcc00; /* Your exclusive color */
+  font-weight: 200; /* Optional: make numbers bold */
+  font-size: 2.9rem; /* Optional: make it bigger than normal text */
+}
 
 .profile {
   display: flex;
@@ -202,4 +220,38 @@ header h2 {
   margin-top: 2px;
   font-weight: 500;
   color: aqua;
+}
+
+
+
+.event-date {
+  background-color: rgba(190, 87, 7, 0.898); /* Light shade rectangle */
+  color: #ffffff; /* Highlight text color */
+  padding: 5px 10px; /* Add some space around text */
+  border-radius: 5px; /* Rounded corners for rectangle */
+  display: inline-block; /* Fit rectangle around text */
+  font-weight: 600; /* Slightly bolder text */
+  margin: 5px 0; /* Space from other lines */
+  font-size: 1.4rem; /* Adjust font size as needed */
+}
+
+
+.event-date-1 {
+  background-color: rgba(0, 119, 57, 0.898); /* Light shade rectangle */
+  color: #ffffff; /* Highlight text color */
+  padding: 5px 10px; /* Add some space around text */
+  border-radius: 5px; /* Rounded corners for rectangle */
+  display: inline-block; /* Fit rectangle around text */
+  font-weight: 600; /* Slightly bolder text */
+  margin: 5px 0; /* Space from other lines */
+  font-size: 1.4rem; /* Adjust font size as needed */
+}
+
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;       /* allow multiple cards in rows if needed */
+  justify-content: center; /* center horizontally */
+  gap: 20px;             /* spacing between cards */
+  margin-top: 20px;      /* optional spacing from previous section */
 }
