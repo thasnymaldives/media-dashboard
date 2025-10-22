@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #003366, #001a33);
+  color: #fff;
+  padding: 20px;
+}
+
+.dashboard {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 70px;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+header h2 {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.date-info {
+  text-align: right;
+}
+
+.projects {
+  margin: 20px 0;
+}
+
+.projects h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.project {
+  background: #0b2a55;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 0 0 330px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.playlist ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.playlist li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* STATUS CARD */
+.status {
+  background: #ffffff;           /* White background */
+  color: #004aad;                /* Blue text */
+  padding: 15px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width:280px;
+}
+
+.status h4 {
+  font-weight: 700;              /* Bold heading */
+  color: #004aad;                /* Blue heading */
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.status p {
+  font-weight: 400;              /* Regular body text */
+  color: #004aad;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc; /* Grey divider */
+}
+
+.status p:last-child {
+  border-bottom: none;           /* Remove divider from last item */
+}
+
+/* Style for the numbers */
+.status p span {
+  font-weight: 700;              /* Bold numbers */
+  color: #000000;                /* Black color for numbers */
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
