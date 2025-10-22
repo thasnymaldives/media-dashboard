@@ -205,3 +205,11 @@ header h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.date-info p#time {
+  font-size: 3rem;
+  opacity: 0.9;
+  margin-top: 2px;
+  font-weight: 500;
+  color: aqua;
+}

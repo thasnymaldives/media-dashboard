@@ -17,25 +17,42 @@
           <h2>MALDIVES IMMIGRATION</h2>
         </div>
       </div>
-  <div class="date-info">
+
+<div class="date-info">
   <p id="day"></p>
   <h3 id="date"></h3>
+  <p id="time"></p> <!-- Time will go here -->
 </div>
 
 <script>
   const dayEl = document.getElementById('day');
   const dateEl = document.getElementById('date');
+  const timeEl = document.getElementById('time');
 
-  const now = new Date();
+  function updateDateTime() {
+    const now = new Date();
 
-  // Get day name
-  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
-  dayEl.textContent = dayName;
+    // Day
+    const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
+    dayEl.textContent = dayName;
 
-  // Get full date, e.g., 22 OCTOBER 2025
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
-  const fullDate = now.toLocaleDateString('en-US', options).toUpperCase();
-  dateEl.textContent = fullDate;
+    // Date
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const fullDate = now.toLocaleDateString('en-US', options).toUpperCase();
+    dateEl.textContent = fullDate;
+
+    // Time (HH:MM:SS)
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    timeEl.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  // Initial call
+  updateDateTime();
+
+  // Update every second
+  setInterval(updateDateTime, 1000);
 </script>
     </header>
 
