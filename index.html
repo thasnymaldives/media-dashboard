@@ -123,11 +123,44 @@
           <p><strong>Venue:</strong> CG Cabin</p>
         </div>
 
-        <div class="card">
-          <h4>Lunch</h4>
-          <p>12:00 – Dhumashi</p>
+        <div class="card" id="countdown-card">
+          <h4>Countdown to Hawwi's Baby Girl</h4>
+          <p id="countdown"></p>
         </div>
       </div>
+
+      <script>
+  // Set the target date: 13 days from now
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 13);
+
+  const countdownEl = document.getElementById('countdown');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdownEl.textContent = "Event Started!";
+      return;
+    }
+
+    // Calculate remaining time
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    // Display in format: 13d 12h 30m 45s
+    countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  // Initial call
+  updateCountdown();
+
+  // Update every second
+  setInterval(updateCountdown, 1000);
+</script>
 
       <!-- Middle Section -->
       <div class="middle-panel">
