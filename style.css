@@ -82,7 +82,7 @@ header h2 {
 .scroll {
   display: flex;
   gap: 20px;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 @keyframes scroll-left {
